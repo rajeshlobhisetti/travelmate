@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@prisma/client": "^6.17.1",
+    "@prisma/client": "^5.10.2",
     "bcryptjs": "^2.4.3",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
@@ -13,6 +13,9 @@
     "mongoose": "^8.19.2",
     "morgan": "^1.10.0"
   },
+  "prisma": {
+    "version": "5.10.2"
+  },
   "name": "server",
   "version": "1.0.0",
   "main": "src/index.js",
@@ -20,11 +23,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.js",
     "start": "node -r dotenv/config src/index.js",
-    "postinstall": "npm install -g prisma && prisma generate",
-    "build": "prisma generate && prisma db push",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push",
     "prisma:studio": "prisma studio",
+    "postinstall": "prisma generate",
+    "build": "prisma generate",
     "seed": "node -r dotenv/config src/seed.js"
   },
   "keywords": [],
